@@ -8,11 +8,12 @@ function Car(make, model) {
 	}
 };
 
-function SportsCar(make, model, topSpeed) {
-	Car.call(this,make,model)
-	this.topSpeed = topSpeed;
-
-	this.getTopSpeed = function(){
+class SportsCar extends Car(
+	constructor(make, model, topSpeed){
+		super(make, model);
+		this.topSpeed = topSpeed;
+	}
+	getTopSpeed(){
 		return this.topSpeed;
 	}
 }
